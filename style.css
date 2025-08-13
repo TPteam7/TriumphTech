@@ -1,0 +1,107 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  /* Background Image with a dark overlay for text readability */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("images/Hero.png") no-repeat center center;
+  background-size: cover;
+}
+
+.fw-black {
+  font-weight: 900; /* For Inter Black */
+}
+
+.sub-heading {
+  font-size: calc(0.6rem + 1.25vw);
+  max-width: 42rem;
+}
+
+.btn-about-us {
+  background-color: rgba(251, 251, 251, 0.2); /* fbfbfb with 20% transparency */
+  backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+  border: 1px solid rgba(251, 251, 251, 0.5); /* Optional: Add a subtle border */
+}
+
+.btn-about-us:hover {
+  background-color: rgba(251, 251, 251, 0.3);
+  border-color: rgba(251, 251, 251, 0.7);
+}
+
+/* Navbar Styles */
+.navbar-toggler {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 50%; /* Makes it a circle */
+  padding: 0.5rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.navbar-toggler:hover {
+  opacity: 0.9;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.give-online-pill {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50rem; /* Pill shape */
+  transition: background-color 0.2s ease-in-out;
+  display: inline-block; /* Ensures it sizes to its content */
+}
+
+.give-online-pill:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* DESKTOP Navigation Styles (992px and wider) */
+@media (min-width: 992px) {
+  .sub-heading {
+    font-size: 2rem; /* Fixed font size on large screens */
+  }
+
+  /* Style the menu list itself to look like a pill */
+  .navbar-collapse .navbar-nav {
+    background-color: rgba(251, 251, 251, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(251, 251, 251, 0.3);
+    border-radius: 50rem; /* Pill shape */
+    padding: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Make the left and right placeholders equal to center the nav pill */
+  .navbar-brand-placeholder,
+  .nav-placeholder-right {
+    flex: 1;
+  }
+}
+
+/* MOBILE Navigation Styles (991.98px and narrower) */
+@media (max-width: 991.98px) {
+  /* Add space between the toggler and the menu when it's open */
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  /* Apply styles to the list inside the container for a smooth animation */
+  .navbar-collapse.collapsing .navbar-nav,
+  .navbar-collapse.show .navbar-nav {
+    background-color: rgba(251, 251, 251, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(251, 251, 251, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .navbar-nav .nav-item {
+    text-align: center;
+    padding: 0.25rem 0;
+  }
+}
