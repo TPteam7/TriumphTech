@@ -59,6 +59,8 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("images/Hero.png") no-repeat center center;
   background-size: cover;
+  border-radius: 0rem 0rem 2rem 2rem;
+  min-height: 110vh !important;
 }
 
 .btn-about-us {
