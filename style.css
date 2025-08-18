@@ -2,21 +2,63 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* ================================= */
+/* == Responsive Typography Scale == */
+/* ================================= */
+
+/* 80px -> 68px on large screens */
+.text-xxl {
+  font-size: clamp(2.2rem, 1.8rem + 2.5vw, 3.8rem);
+  font-weight: 900; /* For Inter Black */
+}
+
+/* 60px -> 48px on large screens */
+.text-xl {
+  font-size: clamp(1.6rem, 1.3rem + 1.8vw, 2.8rem);
+}
+
+/* 48px -> 38px on large screens */
+.text-lg {
+  font-size: clamp(1.3rem, 1rem + 1.2vw, 2rem);
+}
+
+/* 36px -> 28px on large screens */
+.text-md {
+  font-size: clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem);
+  max-width: 42rem; /* Keeps hero sub-header from getting too wide */
+}
+
+/* 32px -> 26px on large screens */
+.text-base-lg {
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.4rem);
+}
+
+/* 28px -> 22px on large screens */
+.text-base {
+  font-size: clamp(0.88rem, 0.8rem + 0.4vw, 1.15rem);
+}
+
+/* 24px -> 18px on large screens */
+.text-sm {
+  font-size: clamp(0.82rem, 0.75rem + 0.4vw, 1rem);
+}
+
+/* 20px -> 17px on large screens */
+.text-xs-lg {
+  font-size: clamp(0.78rem, 0.7rem + 0.3vw, 0.95rem);
+}
+
+/* 18px -> 15px on large screens */
+.text-xs {
+  font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
+}
+
 /* Hero Section Styles */
 .hero-section {
   /* Background Image with a dark overlay for text readability */
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("images/Hero.png") no-repeat center center;
   background-size: cover;
-}
-
-.fw-black {
-  font-weight: 900; /* For Inter Black */
-}
-
-.sub-heading {
-  font-size: calc(0.6rem + 1.25vw);
-  max-width: 42rem;
 }
 
 .btn-about-us {
@@ -31,16 +73,25 @@ body {
 }
 
 /* Navbar Styles */
-.navbar-toggler {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 50%; /* Makes it a circle */
-  padding: 0.5rem;
-  transition: opacity 0.2s ease-in-out;
+.logo {
+  height: 40px; /* Adjust logo height as needed */
 }
 
-.navbar-toggler:hover {
+/* Unified Hamburger Button Styles */
+.hamburger-btn {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease-in-out;
+  padding: 0;
+}
+
+.hamburger-btn:hover {
   opacity: 0.9;
 }
 
@@ -55,31 +106,172 @@ body {
   display: inline-block; /* Ensures it sizes to its content */
 }
 
+.give-online-pill .nav-link {
+  padding: 0.55rem 1.1rem !important;
+}
+
 .give-online-pill:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* DESKTOP Navigation Styles (992px and wider) */
-@media (min-width: 992px) {
-  .sub-heading {
-    font-size: 2rem; /* Fixed font size on large screens */
-  }
+.account-link {
+  font-weight: 500;
+  transition: opacity 0.2s ease-in-out;
+  white-space: nowrap; /* Prevents the text and icon from wrapping */
+}
 
+.account-link:hover {
+  opacity: 0.8;
+}
+
+/* General Dropdown Menu Styles */
+.dropdown-menu {
+  background-color: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  margin-top: 0; /* Reset margin */
+}
+
+.dropdown-item {
+  color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Makes dropdown arrow white */
+.dropdown-toggle::after {
+  color: #ffffff;
+}
+
+/* Hero Footer Styles */
+.countdown-timer {
+  letter-spacing: 2px;
+}
+
+.social-links a {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  opacity: 0.7;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+  background-color: #ffffff; /* White background */
+  color: #2e2320; /* Dark text color */
+}
+
+.cross-image {
+  width: 100%;
+  height: calc(15vw + 10vh); /* Set a fixed height for the image container */
+  object-fit: cover; /* This makes the image cover the container, cropping as needed */
+  object-position: center center; /* This centers the image within its frame */
+  border-radius: 1rem; /* Rounded corners */
+}
+
+/* MEDIUM & LARGE DESKTOP Navigation Styles (992px and wider) */
+@media (min-width: 992px) {
   /* Style the menu list itself to look like a pill */
   .navbar-collapse .navbar-nav {
     background-color: rgba(251, 251, 251, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(251, 251, 251, 0.3);
     border-radius: 50rem; /* Pill shape */
-    padding: 0.5rem;
+    padding: 0.2rem; /* Reduced padding */
     flex-direction: row;
     align-items: center;
   }
 
-  /* Make the left and right placeholders equal to center the nav pill */
-  .navbar-brand-placeholder,
+  /* Give the logo and account link containers a fixed, equal width */
+  .navbar-brand,
   .nav-placeholder-right {
-    flex: 1;
+    width: 160px;
+    flex-shrink: 0; /* Prevent containers from shrinking */
+  }
+
+  /* Center the desktop dropdown menu */
+  .nav-item.dropdown .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+  }
+
+  /* Group for Give Online and More button */
+  .nav-end-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* Style the "More" dropdown toggler */
+  .more-toggle {
+    padding: 0 !important;
+  }
+  .more-toggle::after {
+    display: none; /* Hide default dropdown arrow */
+  }
+  .more-dropdown {
+    display: none; /* Hide by default */
+  }
+  .more-dropdown .dropdown-menu {
+    right: 0;
+    left: auto;
+    transform: none;
+  }
+  .more-dropdown-item {
+    display: none; /* Hide all dropdown items by default */
+  }
+}
+
+/* EXTRA LARGE DESKTOP Styles (1400px and wider) */
+@media (min-width: 1400px) {
+  /* Adjust container widths for the largest screens */
+  .navbar-brand,
+  .nav-placeholder-right {
+    width: 200px;
+  }
+}
+
+/* Hide "Media" and show "More" button */
+@media (max-width: 1300px) {
+  .nav-item-media {
+    display: none;
+  }
+  .more-dropdown {
+    display: block;
+  }
+  .more-item-media {
+    display: list-item;
+  }
+}
+
+/* Hide "Events" */
+@media (max-width: 1200px) {
+  .nav-item-events {
+    display: none;
+  }
+  .more-item-events {
+    display: list-item;
+  }
+}
+
+/* Hide "Ministries" */
+@media (max-width: 1100px) {
+  .nav-item-ministries {
+    display: none;
+  }
+  .more-item-ministries {
+    display: list-item;
   }
 }
 
@@ -103,5 +295,26 @@ body {
   .navbar-nav .nav-item {
     text-align: center;
     padding: 0.25rem 0;
+  }
+
+  /* Reset dropdown styles for mobile */
+  .dropdown-menu {
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
+    text-align: center;
+    /* Reset desktop positioning */
+    left: auto;
+    transform: none;
+  }
+  .dropdown-item {
+    color: #e9ecef;
+  }
+
+  .more-dropdown {
+    display: none; /* Hide the "More" button on mobile */
+  }
+  .main-nav-item {
+    display: block !important; /* Ensure all items are visible in mobile dropdown */
   }
 }
