@@ -32,13 +32,11 @@
   </head>
   <body>
     <!-- The main hero container -->
-    <div
-      class="hero-section min-vh-100 d-flex flex-column align-items-center px-5"
-    >
+    <div class="hero-section min-vh-100 d-flex flex-column align-items-center">
       <!-- ================================= -->
       <!-- ============ NAVBAR ============= -->
       <!-- ================================= -->
-      <header class="w-100 py-4">
+      <header class="py-4 container">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid px-0">
             <!-- LOGO -->
@@ -123,7 +121,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item main-nav-item">
+                <li class="nav-item main-nav-item nav-item-connect">
                   <a class="nav-link text-white px-3 text-xs" href="#"
                     >Connect</a
                   >
@@ -186,6 +184,9 @@
                         </svg>
                       </a>
                       <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="more-dropdown-item more-item-connect">
+                          <a class="dropdown-item text-xs" href="#">Connect</a>
+                        </li>
                         <li class="more-dropdown-item more-item-ministries">
                           <a class="dropdown-item text-xs" href="#"
                             >Ministries</a
@@ -226,12 +227,12 @@
 
       <!-- Centered Hero Content -->
       <div
-        class="w-100 flex-grow-1 d-flex align-items-center justify-content-center text-center text-white"
+        class="container flex-grow-1 d-flex align-items-center justify-content-center text-center text-white"
       >
         <div class="col-lg-8">
           <div class="mx-auto">
             <h1 class="text-xxl">We're Glad You're Here</h1>
-            <p class="text-md mx-auto">
+            <p class="text-md mx-auto col-lg-10">
               We are a thriving and diverse community of real people
               experiencing real life together.
             </p>
@@ -239,7 +240,9 @@
           <div
             class="d-grid gap-3 d-sm-flex justify-content-sm-center mt-4 pt-2"
           >
-            <a href="#" class="btn btn-light btn-lg px-4 py-2 text-sm fw-bold"
+            <a
+              href="#"
+              class="btn btn-light text-primary-dark btn-lg px-4 py-2 text-sm fw-bold"
               >Plan a Visit</a
             >
             <a
@@ -254,7 +257,7 @@
       <!-- ================================= -->
       <!-- ====== HERO BOTTOM CONTENT ====== -->
       <!-- ================================= -->
-      <footer class="hero-footer w-100 py-4 mt-auto">
+      <footer class="container hero-footer py-4 mt-auto mb-3">
         <div class="row align-items-end">
           <!-- Spacer on Desktop -->
           <div class="d-none d-md-block col-md-4"></div>
@@ -293,17 +296,21 @@
     <!-- ================================= -->
     <!-- ======== WELCOME SECTION ======== -->
     <!-- ================================= -->
-    <section class="welcome-section py-5 my-lg-3 mb-5">
-      <div class="col-lg-8 mx-auto px-5">
-        <p class="text-xs-lg mb-2 fw-bold">WELCOME TO ROCK SOLID</p>
+    <section
+      class="container welcome-section py-5 my-lg-3 mb-5 justify-content-center align-items-center d-flex"
+    >
+      <div class="col-lg-8 mx-auto">
+        <p class="text-xs-lg text-neutral-light-gray mb-2 fw-bold">
+          WELCOME TO ROCK SOLID
+        </p>
         <div class="row align-items-start">
-          <div class="col-md-6">
-            <p class="text-base-lg fw-bold">
+          <div class="col-md-7 pe-lg-5">
+            <p class="text-base-lg text-primary-dark fw-bold">
               Following the Holy Spirit, we exist to create a movement of
               disciple-making disciples.
             </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5">
             <p class="text-xs">
               Rock Solid Church is committed to creating a movement of
               disciple-making disciples—men and women who reflect the diversity
@@ -317,6 +324,120 @@
             alt="A cross"
             class="img-fluid cross-image"
           />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================= -->
+    <!-- ======== MISSION SECTION ======== -->
+    <!-- ================================= -->
+    <section class="mission-section">
+      <div class="text-center">
+        <img src="images/Arrow.svg" alt="A second image" class="img-fluid" />
+      </div>
+      <div class="container mt-lg-5 py-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="text-lg fw-bold text-white">Our Mission is Simple</h2>
+          <p class="text-xs mt-3 text-white col-lg-6 mx-auto">
+            <b>The gospel is the good news of Jesus:</b> That Jesus lived a
+            sinless life in my place, died the death that
+          </p>
+
+          <div class="row mt-5 g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="mission-card">
+                <img
+                  src="images/MessageIcon.svg"
+                  alt="Watch a Message"
+                  class="card-icon mb-3"
+                />
+                <h3 class="text-base fw-bold text-primary-dark">
+                  Watch a Message
+                </h3>
+                <p class="text-xs my-3 text-primary-dark">
+                  Catch up on the latest and past weekend service messages
+                  anytime, anywhere.
+                </p>
+                <a
+                  href="#"
+                  class="text-xs-lg fw-bold text-accent-orange text-decoration-none"
+                  >Catch Our Latest Message</a
+                >
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="mission-card">
+                <img
+                  src="images/LocationIcon.svg"
+                  alt="Find a Location"
+                  class="card-icon mb-3"
+                />
+                <h3 class="text-base fw-bold text-primary-dark">
+                  Find a Location
+                </h3>
+                <p class="text-xs my-3 text-primary-dark">
+                  Easily find a campus near you. Join us in person and get
+                  connected.
+                </p>
+                <a
+                  href="#"
+                  class="text-xs-lg fw-bold text-accent-orange text-decoration-none"
+                  >Search Our Campuses</a
+                >
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="mission-card">
+                <img
+                  src="images/ConnectIcon.svg"
+                  alt="Get Connected"
+                  class="card-icon mb-3"
+                />
+                <h3 class="text-base fw-bold text-primary-dark">
+                  Get Connected
+                </h3>
+                <p class="text-xs my-3 text-primary-dark">
+                  Stay connected and in the loop—sign up for updates, events,
+                  and ways to get involved.
+                </p>
+                <a
+                  href="#"
+                  class="text-xs-lg fw-bold text-accent-orange text-decoration-none"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="text-start mt-5 pt-5">
+            <p class="text-xs-lg text-white mb-2 fw-bold">GOSPEL</p>
+            <div class="row align-items-start">
+              <div class="col-md-7 pe-lg-5">
+                <p class="text-base-lg text-white fw-bold">
+                  The gospel is what should characterize us. It should be our
+                  identity: We are a gospel people.
+                </p>
+              </div>
+              <div class="col-md-5">
+                <p class="text-xs text-white">
+                  <b>The gospel is the good news of Jesus:</b> That Jesus lived
+                  a sinless life in my place, died the death that I deserved,
+                  and rose to life again. And whoever believes in him has
+                  eternal life.
+                </p>
+              </div>
+            </div>
+            <div class="text-center mt-3">
+              <img
+                src="images/Mission.png"
+                alt="A second image"
+                class="img-fluid mission-image"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

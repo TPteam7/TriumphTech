@@ -1,5 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
+  background-color: #fcfcfc;
 }
 
 /* ================================= */
@@ -25,7 +26,6 @@ body {
 /* 36px -> 28px on large screens */
 .text-md {
   font-size: clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem);
-  max-width: 42rem; /* Keeps hero sub-header from getting too wide */
 }
 
 /* 32px -> 26px on large screens */
@@ -51,6 +51,66 @@ body {
 /* 18px -> 15px on large screens */
 .text-xs {
   font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
+}
+
+/* ================================= */
+/* ======== Color Palette ========== */
+/* ================================= */
+
+.text-primary-dark {
+  color: #2e2320;
+}
+.bg-primary-dark {
+  background-color: #2e2320;
+}
+
+.text-accent-orange {
+  color: #ed4b1e;
+}
+.bg-accent-orange {
+  background-color: #ed4b1e;
+}
+
+.text-white {
+  color: #ffffff;
+}
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-off-white {
+  color: #fbfbfb;
+}
+.bg-off-white {
+  background-color: #fbfbfb;
+}
+
+.text-neutral-dark-gray {
+  color: #585858;
+}
+.bg-neutral-dark-gray {
+  background-color: #585858;
+}
+
+.text-neutral-light-gray {
+  color: #ababab;
+}
+.bg-neutral-light-gray {
+  background-color: #ababab;
+}
+
+.text-secondary-dark-blue {
+  color: #192c40;
+}
+.bg-secondary-dark-blue {
+  background-color: #192c40;
+}
+
+.text-black {
+  color: #000000;
+}
+.bg-black {
+  background-color: #000000;
 }
 
 /* Hero Section Styles */
@@ -169,8 +229,7 @@ body {
 
 /* Welcome Section Styles */
 .welcome-section {
-  background-color: #ffffff; /* White background */
-  color: #2e2320; /* Dark text color */
+  min-height: 40vh;
 }
 
 .cross-image {
@@ -179,6 +238,42 @@ body {
   object-fit: cover; /* This makes the image cover the container, cropping as needed */
   object-position: center center; /* This centers the image within its frame */
   border-radius: 1rem; /* Rounded corners */
+}
+
+/* Mission Section Styles */
+.mission-section {
+  /* Background Image with a dark overlay for text readability */
+  background-image: url("images/Waves.png");
+  background-size: cover;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.mission-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-card a {
+  margin-top: auto;
+}
+
+.card-icon {
+  height: 50px;
+  width: auto;
+}
+
+.mission-image {
+  width: 100%;
+  height: calc(15vw + 10vh); /* Set a fixed height for the image container */
+  object-fit: cover; /* This makes the image cover the container, cropping as needed */
+  object-position: center center; /* This centers the image within its frame */
+  border-radius: 1rem 1rem 1rem 1rem; /* Rounded corners */
 }
 
 /* MEDIUM & LARGE DESKTOP Navigation Styles (992px and wider) */
@@ -233,6 +328,10 @@ body {
   .more-dropdown-item {
     display: none; /* Hide all dropdown items by default */
   }
+
+  .mission-image {
+    border-radius: 1rem 1rem 0rem 0rem; /* Rounded corners */
+  }
 }
 
 /* EXTRA LARGE DESKTOP Styles (1400px and wider) */
@@ -245,7 +344,7 @@ body {
 }
 
 /* Hide "Media" and show "More" button */
-@media (max-width: 1300px) {
+@media (max-width: 1450px) {
   .nav-item-media {
     display: none;
   }
@@ -258,7 +357,7 @@ body {
 }
 
 /* Hide "Events" */
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
   .nav-item-events {
     display: none;
   }
@@ -268,11 +367,21 @@ body {
 }
 
 /* Hide "Ministries" */
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .nav-item-ministries {
     display: none;
   }
   .more-item-ministries {
+    display: list-item;
+  }
+}
+
+/* Hide "Connect" */
+@media (max-width: 1150px) {
+  .nav-item-connect {
+    display: none;
+  }
+  .more-item-connect {
     display: list-item;
   }
 }
