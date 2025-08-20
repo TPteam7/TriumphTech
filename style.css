@@ -1,6 +1,7 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #fcfcfc;
+  overflow-x: hidden;
 }
 
 /* ================================= */
@@ -31,27 +32,27 @@ body {
 
 /* 32px -> 26px on large screens */
 .text-base-lg {
-  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.6rem);
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.6rem);
 }
 
 /* 28px -> 22px on large screens */
 .text-base {
-  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.35rem);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.35rem);
 }
 
 /* 24px -> 18px on large screens */
 .text-sm {
-  font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.15rem);
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.15rem);
 }
 
 /* 20px -> 17px on large screens */
 .text-xs-lg {
-  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
+  font-size: clamp(0.9rem, 0.8rem + 0.4vw, 1.05rem);
 }
 
 /* 18px -> 15px on large screens */
 .text-xs {
-  font-size: clamp(0.8rem, 0.7rem + 0.3vw, 0.95rem);
+  font-size: clamp(0.85rem, 0.75rem + 0.3vw, 1rem);
 }
 
 /* ================================= */
@@ -237,7 +238,7 @@ body {
 
 /* Welcome Section Styles */
 .welcome-section {
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .cross-image {
@@ -287,7 +288,7 @@ body {
 /* Love & Hope Section Styles */
 .love-hope-section {
   overflow: hidden; /* Prevents accents from causing horizontal scroll */
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
