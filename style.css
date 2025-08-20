@@ -16,6 +16,7 @@ body {
 /* 60px -> 48px on large screens */
 .text-xl {
   font-size: clamp(1.6rem, 1.3rem + 1.8vw, 2.8rem);
+  font-weight: 800;
 }
 
 /* 48px -> 38px on large screens */
@@ -30,27 +31,27 @@ body {
 
 /* 32px -> 26px on large screens */
 .text-base-lg {
-  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.4rem);
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.6rem);
 }
 
 /* 28px -> 22px on large screens */
 .text-base {
-  font-size: clamp(0.88rem, 0.8rem + 0.4vw, 1.15rem);
+  font-size: clamp(0.95rem, 0.85rem + 0.5vw, 1.35rem);
 }
 
 /* 24px -> 18px on large screens */
 .text-sm {
-  font-size: clamp(0.82rem, 0.75rem + 0.4vw, 1rem);
+  font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.15rem);
 }
 
 /* 20px -> 17px on large screens */
 .text-xs-lg {
-  font-size: clamp(0.78rem, 0.7rem + 0.3vw, 0.95rem);
+  font-size: clamp(0.85rem, 0.75rem + 0.4vw, 1.05rem);
 }
 
 /* 18px -> 15px on large screens */
 .text-xs {
-  font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
+  font-size: clamp(0.8rem, 0.7rem + 0.3vw, 0.95rem);
 }
 
 /* ================================= */
@@ -69,6 +70,13 @@ body {
 }
 .bg-accent-orange {
   background-color: #ed4b1e;
+}
+
+.text-accent-orange-dark {
+  color: #eb3300;
+}
+.bg-accent-orange-dark {
+  background-color: #eb3300;
 }
 
 .text-white {
@@ -100,10 +108,10 @@ body {
 }
 
 .text-secondary-dark-blue {
-  color: #192c40;
+  color: rgba(25, 44, 64, 0.4);
 }
 .bg-secondary-dark-blue {
-  background-color: #192c40;
+  background-color: rgba(25, 44, 64, 0.4);
 }
 
 .text-black {
@@ -229,7 +237,7 @@ body {
 
 /* Welcome Section Styles */
 .welcome-section {
-  min-height: 40vh;
+  min-height: 60vh;
 }
 
 .cross-image {
@@ -274,6 +282,91 @@ body {
   object-fit: cover; /* This makes the image cover the container, cropping as needed */
   object-position: center center; /* This centers the image within its frame */
   border-radius: 1rem 1rem 1rem 1rem; /* Rounded corners */
+}
+
+/* Love & Hope Section Styles */
+.love-hope-section {
+  overflow: hidden; /* Prevents accents from causing horizontal scroll */
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.love-hope-section .btn.bg-primary-dark:hover {
+  background-color: #4a3b37 !important;
+}
+
+.mask-group {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  z-index: -1;
+  mix-blend-mode: exclusion;
+  -webkit-mask-image: radial-gradient(circle, black 20%, transparent 45%);
+  mask-image: radial-gradient(circle, black 20%, transparent 45%);
+  opacity: 0.8; /* Makes the blend effect darker */
+}
+
+.mask-group.top-right {
+  top: -300px;
+  right: -100px;
+}
+
+.mask-group.bottom-left {
+  bottom: -400px;
+  left: -120px;
+  rotate: 90deg;
+  transform: scaleX(-1);
+}
+
+.accent-line {
+  position: absolute;
+  background-color: #2e2320;
+  z-index: -1;
+}
+
+.accent-line.top-left {
+  width: clamp(35px, 4vw, 55px);
+  height: clamp(3px, 0.35vw, 5px);
+  top: 10%;
+  left: 10%;
+}
+
+.accent-line.bottom-right {
+  width: clamp(3px, 0.35vw, 5px);
+  height: clamp(35px, 4vw, 55px);
+  bottom: 10%;
+  right: 10%;
+}
+
+/* Volunteer Section Styles */
+.volunteer-section {
+  overflow-x: hidden; /* Prevents horizontal scroll from the swiper */
+}
+
+.volunteer-swiper {
+  overflow: visible; /* Allows slides to wrap off the side */
+}
+
+.volunteer-swiper .swiper-slide {
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.volunteer-img {
+  width: 100%;
+  aspect-ratio: 1 / 1.75;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.slide-title a.active-title {
+  color: #eb3300 !important;
+}
+
+.slide-title a.active-title::after {
+  content: " >";
 }
 
 /* MEDIUM & LARGE DESKTOP Navigation Styles (992px and wider) */
