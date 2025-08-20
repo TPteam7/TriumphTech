@@ -1,7 +1,7 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #fcfcfc;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 /* ================================= */
@@ -47,7 +47,7 @@ body {
 
 /* 20px -> 17px on large screens */
 .text-xs-lg {
-  font-size: clamp(1.05rem, 0.85rem + 0.5vw, 1.1rem);
+  font-size: clamp(1.05rem, 0.85rem + 0.5vw, 1.2rem);
 }
 
 /* 18px -> 15px on large screens */
@@ -238,7 +238,7 @@ body {
 
 /* Welcome Section Styles */
 .welcome-section {
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .cross-image {
@@ -254,6 +254,7 @@ body {
   /* Background Image with a dark overlay for text readability */
   background-image: url("images/Waves.png");
   background-size: cover;
+  border-radius: 0rem;
 }
 
 .mission-card {
@@ -287,7 +288,7 @@ body {
 /* Love & Hope Section Styles */
 .love-hope-section {
   overflow: hidden; /* Prevents accents from causing horizontal scroll */
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -369,10 +370,7 @@ body {
   content: " >";
 }
 
-/* =================================== */
-/* == SAVED & CHANGED LIVES SECTION == */
-/* =================================== */
-
+/* Saved & Changed Lives Section Styles */
 .saved-changed-section {
   background-color: #2e2320;
 }
@@ -389,48 +387,29 @@ body {
   color: #ffffff;
 }
 
+/* Mobile-first: Stacked layout */
 .story-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr); /* This creates two equal-height rows */
   gap: 1.5rem;
 }
 
-/* This targets the container for each story */
 .story-item {
-  display: flex; /* Use flexbox to help align the content inside */
+  display: flex;
   flex-direction: column;
 }
 
-.story-item.joshua {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.story-item.by-any-means {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-.story-item.holding-on {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-/* The link now acts as the main container for the image and title */
 .story-link {
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Make the link fill the entire grid cell */
+  height: 100%;
 }
 
-/* The image wrapper will now grow to fill the available space */
 .story-image-wrapper {
   overflow: hidden;
   border-radius: 1rem;
   width: 100%;
-  flex-grow: 1; /* This is the key fix: it makes the image container expand vertically */
+  flex-grow: 1;
 }
 
 .story-img {
@@ -510,6 +489,27 @@ body {
     border-radius: 1rem 1rem 0rem 0rem; /* Rounded corners */
   }
 
+  /* Apply grid layout on desktop */
+  .story-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .story-item.joshua {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .story-item.by-any-means {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .story-item.holding-on {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
   .saved-changed-section {
     border-radius: 2rem;
   }
@@ -519,7 +519,7 @@ body {
   }
 
   .hero-section {
-    border-radius: 0rem 0rem 2rem 2rem;
+    border-radius: 0rem 0rem 2rem 2rem; /* Rounded corners for the hero section */
   }
 }
 
@@ -616,5 +616,17 @@ body {
   }
   .main-nav-item {
     display: block !important; /* Ensure all items are visible in mobile dropdown */
+  }
+
+  /* Saved & Changed Lives Section Mobile Adjustments */
+  .story-grid {
+    gap: 2.5rem; /* Increased spacing for mobile */
+  }
+
+  .story-image-wrapper,
+  .cross-image,
+  .mission-image {
+    height: auto;
+    aspect-ratio: 16 / 9; /* Enforce a consistent aspect ratio for all images */
   }
 }
