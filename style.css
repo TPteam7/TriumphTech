@@ -432,6 +432,62 @@ body {
   padding: 0;
 }
 
+/* Footer Styles */
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #2e2320;
+  color: #2e2320;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background-color: #2e2320;
+  color: #ffffff;
+}
+
+.btn-footer-primary {
+  background-color: #2e2320;
+  border-color: #2e2320;
+}
+
+.btn-footer-primary:hover {
+  background-color: #4a3b37;
+  border-color: #4a3b37;
+}
+
+.btn-footer-outline {
+  border-color: #2e2320;
+}
+
+.btn-footer-outline:hover {
+  background-color: #2e2320;
+  color: #ffffff !important;
+}
+
+.footer-link {
+  line-height: 2;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #585858 !important;
+}
+
+.sub-footer-link {
+  color: #eb3300;
+  text-decoration: underline;
+}
+
+.sub-footer-link:hover {
+  color: #d32d00;
+}
+
 /* MEDIUM & LARGE DESKTOP Navigation Styles (992px and wider) */
 @media (min-width: 992px) {
   /* Style the menu list itself to look like a pill */
